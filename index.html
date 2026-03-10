@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Global Quipu – We Are Better Together</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#0d1117;
+color:#eee;
+text-align:center;
+}
+
+h1{color:#ffd700}
+
+.container{max-width:900px;margin:auto}
+
+.rope{
+width:6px;
+height:600px;
+background:#c49a6c;
+margin:40px auto;
+position:relative;
+}
+
+.knot{
+width:22px;
+height:22px;
+border-radius:50%;
+position:absolute;
+left:-8px;
+}
+
+.love{background:#ff4d6d}
+.friendship{background:#00c2ff}
+.community{background:#22c55e}
+.knowledge{background:#ffd700}
+.symbiosis{background:#9b5cff}
+
+button{
+padding:10px 20px;
+margin:5px;
+border:none;
+background:#ffd700;
+cursor:pointer;
+font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Global Quipu</h1>
+<h2>We Are Better Together</h2>
+
+<p>A symbolic rope for humanity.</p>
+
+<div class="rope" id="rope"></div>
+
+<button onclick="addKnot('love')">Love</button>
+<button onclick="addKnot('friendship')">Friendship</button>
+<button onclick="addKnot('community')">Community</button>
+<button onclick="addKnot('knowledge')">Knowledge</button>
+<button onclick="addKnot('symbiosis')">Human + AI</button>
+
+<script>
+
+let rope=document.getElementById("rope")
+let knotCount=0
+
+function addKnot(type){
+
+let knot=document.createElement("div")
+
+knot.className="knot "+type
+
+let pos=50+(knotCount*40)
+
+knot.style.top=pos+"px"
+
+rope.appendChild(knot)
+
+knotCount++
+
+}
+
+</script>
+
+</body>
+</html>
